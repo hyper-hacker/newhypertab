@@ -7,7 +7,7 @@ RUN apt-get update && apt-get install -y nginx git curl
 RUN curl -sL https://deb.nodesource.com/setup_14.x | bash - && apt-get install -y nodejs
 
 # clone repo
-RUN git clone --recursive https://github.com/omer515/womginx-1 /opt/womginx
+RUN git clone --recursive https://github.com/omer515/womginxhypertab /opt/womginx
 
 # build womginx, modify nginx.conf, and copy it to /etc/nginx/nginx.conf
 RUN cd /opt/womginx/public/wombat && npm install && npm run build-prod && cd ..\
