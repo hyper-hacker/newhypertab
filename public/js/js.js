@@ -29,7 +29,7 @@ function addPageToHistory(id, page) {
   history[id][1] = history[id][0].length - 1;
 }
 function getPage(id) {
-  return ((history[id] || [])[0] || [])[history[id][1]] || '/main.php';
+  return ((history[id] || [])[0] || [])[history[id][1]] || '/main.html';
 }
 function getBack(id) {
   sir = false;
@@ -128,7 +128,7 @@ function opencity(a) {
   document.getElementById(a).style = 'display:inline';
   document.getElementById(a).focus();
   switch (document.getElementById(a).contentWindow.location.href) {
-    case `${document.URL}main.php`:
+    case `${document.URL}main.html`:
       document.getElementById('urlbar').value=' ';
       break;
     case '':
@@ -155,7 +155,7 @@ document.querySelector('button[data-add-tab]').addEventListener('click', _ => {
   document.getElementById('urlbar').value = '';
   var uwu = i++;
   var frame = document.createElement('IFRAME');
-  frame.setAttribute('src', 'main.php');
+  frame.setAttribute('src', 'main.html');
   frame.setAttribute('allow', 'fullscreen');
   frame.setAttribute('sandbox', 'allow-same-origin allow-scripts allow-popups allow-forms allow-pointer-lock')
   document.body.appendChild(frame);
