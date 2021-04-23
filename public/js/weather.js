@@ -7,7 +7,7 @@ class Info {
     }
     // get users approximate city, latitude, and longitude based on IP
     static async getIpLoc() {
-        let data = await this.getResponse(`https://alloy123.herokuapp.com/fetch/_aHR0cDovL2lwLWFwaS5jb20=_/json/${ip}`);
+        let data = await this.getResponse(`https://notsus.herokuapp.com/fetch/_aHR0cDovL2lwLWFwaS5jb20=_/json/${ip}`);
         let latlon = `${data.lat},${data.lon}`,
             city = data.city;
         console.log(latlon);
@@ -57,7 +57,7 @@ async function doStuff() {
     document.getElementById('winfo').innerHTML = `${weather.temp}&degF in ${ipdat.city}`;
     console.log(weather.alert.length);
     if (!weather.alert.length == 0) {
-        document.getElementById('alerts').setAttribute('onclick', `location.href = 'https://alloy123.herokuapp.com/fetch/_aHR0cHM6Ly9mb3JlY2FzdC53ZWF0aGVyLmdvdg==_/MapClick.php?&lat=${ipdat.latlon.replace(',', '&lon=')}'`);
+        document.getElementById('alerts').setAttribute('onclick', `location.href = 'https://notsus.herokuapp.com/fetch/_aHR0cHM6Ly9mb3JlY2FzdC53ZWF0aGVyLmdvdg==_/MapClick.php?&lat=${ipdat.latlon.replace(',', '&lon=')}'`);
     } else {
         return;
     };
