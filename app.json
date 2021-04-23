@@ -1,11 +1,14 @@
 {
     "name": "Womginx",
+    "name": "Womginx Hypertab",
     "description": "Fastest proxy using only nginx as the backend server",
     "repository": "https://github.com/binary-person/womginx",
+    "repository": "https://github.com/hyper-hacker/womginxhypertab",
     "logo": "https://raw.githubusercontent.com/binary-person/womginx/master/public/logo.png",
     "keywords": [
         "nginx",
         "docker"
     ],
     "stack": "container"
+} 
 }
