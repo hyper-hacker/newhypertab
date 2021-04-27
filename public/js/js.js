@@ -78,10 +78,10 @@ function action(a) {
   } else if (!value.value.includes('http')) {
     value.value = "http://" + value.value;
     let b64URL = getUrl();
-    document.getElementById(getActiveFrameId()).src = "https://notsus.herokuapp.com/fetch/" + getUrl();
+    document.getElementById(getActiveFrameId()).src = "https://notsus1.herokuapp.com/fetch/" + getUrl();
   } else {
     let b64URL = getUrl();
-    document.getElementById(getActiveFrameId()).src = "https://notsus.herokuapp.com/fetch/" + getUrl();
+    document.getElementById(getActiveFrameId()).src = "https://notsus1.herokuapp.com/fetch/" + getUrl();
   }
 }
 function hideId(...x) {
@@ -118,7 +118,7 @@ function openMenu(...x) {
   }
 }
 function inspect() {
-  (function () { var script = document.createElement('script'); script.src = 'js/inspect.js'; script.className = 'webxray'; script.setAttribute('data-lang', 'en-US'); script.setAttribute('data-baseuri', 'https://notsus.herokuapp.com/fetch/_aHR0cHM6Ly94LXJheS1nb2dnbGVzLm1vdXNlLm9yZw==_/'); document.body.appendChild(script); }())
+  (function () { var script = document.createElement('script'); script.src = 'js/inspect.js'; script.className = 'webxray'; script.setAttribute('data-lang', 'en-US'); script.setAttribute('data-baseuri', 'https://notsus1.herokuapp.com/fetch/_aHR0cHM6Ly94LXJheS1nb2dnbGVzLm1vdXNlLm9yZw==_/'); document.body.appendChild(script); }())
 }
 function opencity(a) {
   tc = document.getElementsByClassName('iframething');
