@@ -7,7 +7,7 @@ function getUrl(x) {
   const urlThing = urlBarcontents
     .match(/http(s?):\/\/(([a-z0-9]|\-|\_|\.){1,999})/gi);
   if (urlThing === null) throw Error('Invalid URL ' + urlBarcontents);
-  const b64Url = '_' + btoa(urlThing[0]) + '_' + urlBarcontents.replace(urlThing[0], '');
+  const b64Url = '?' + btoa(urlThing[0]) + '' + urlBarcontents.replace(urlThing[0], '');
   return b64Url;
 }
 const getActiveFrameId = () => +document.querySelector(".chrome-tab[active]").getAttribute("ifd") + 1;
@@ -78,10 +78,10 @@ function action(a) {
   } else if (!value.value.includes('http')) {
     value.value = "http://" + value.value;
     let b64URL = getUrl();
-    document.getElementById(getActiveFrameId()).src = "https://notsus1.herokuapp.com/fetch/" + getUrl();
+    document.getElementById(getActiveFrameId()).src = "https://Redirector.konggames.repl.co" + getUrl();
   } else {
     let b64URL = getUrl();
-    document.getElementById(getActiveFrameId()).src = "https://notsus1.herokuapp.com/fetch/" + getUrl();
+    document.getElementById(getActiveFrameId()).src = "https://Redirector.konggames.repl.co" + getUrl();
   }
 }
 function hideId(...x) {
@@ -118,7 +118,7 @@ function openMenu(...x) {
   }
 }
 function inspect() {
-  (function () { var script = document.createElement('script'); script.src = 'js/inspect.js'; script.className = 'webxray'; script.setAttribute('data-lang', 'en-US'); script.setAttribute('data-baseuri', 'https://notsus1.herokuapp.com/fetch/_aHR0cHM6Ly94LXJheS1nb2dnbGVzLm1vdXNlLm9yZw==_/'); document.body.appendChild(script); }())
+  (function () { var script = document.createElement('script'); script.src = 'js/inspect.js'; script.className = 'webxray'; script.setAttribute('data-lang', 'en-US'); script.setAttribute('data-baseuri', 'https://Redirector.konggames.repl.co?aHR0cHM6Ly94LXJheS1nb2dnbGVzLm1vdXNlLm9yZw=='); document.body.appendChild(script); }())
 }
 function opencity(a) {
   tc = document.getElementsByClassName('iframething');
